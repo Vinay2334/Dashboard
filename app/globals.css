@@ -16,12 +16,42 @@
   }
 }
 
+@layer utilities {
+  .menu-item {
+    @apply flex flex-col gap-3 mb-5;
+  }
+
+  .menu-title {
+    @apply text-xs font-bold text-gray-400;
+  }
+
+  .title {
+    @apply text-xs font-bold text-gray-400;
+  }
+
+  .listItem {
+    @apply flex align-middle gap-3 p-3 hover:bg-gray-700;
+  }
+
+  .box {
+    @apply p-5 rounded-xl border border-solid border-gray-700
+  }
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #2a3447;
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+
+.grid-auto-rows-minmax {
+  grid-auto-rows: minmax(180px, auto);
 }
